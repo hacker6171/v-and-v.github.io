@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>For You Vinnu ❤️</title>
+<meta charset="UTF-8">
+<title>For You Vinnu ❤️</title>
+
 <style>
+
 body {
     margin: 0;
     font-family: "Georgia", serif;
     background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     overflow: hidden;
 }
 
-/* Card styling */
+/* Main card */
+
 .card {
     background: white;
     padding: 40px;
@@ -24,12 +31,14 @@ body {
     z-index: 2;
 }
 
-/* Heartbeat animation */
+/* Love heartbeat */
+
 .love {
     font-size: 28px;
     color: #e91e63;
     animation: beat 1.2s infinite;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 @keyframes beat {
@@ -39,31 +48,59 @@ body {
 }
 
 /* Butterfly animation */
+
 .butterfly {
-    position: absolute;
+    position: fixed;
+    top: -50px;
     font-size: 28px;
-    animation: fly 12s linear infinite;
-    opacity: 0.8;
+    animation: flyUp 12s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.9;
 }
 
-@keyframes fly {
+@keyframes flyUp {
     0% {
         transform: translateY(100vh) translateX(0);
+        opacity: 0;
     }
+
+    20% {
+        opacity: 1;
+    }
+
     50% {
-        transform: translateY(50vh) translateX(100px);
+        transform: translateY(50vh) translateX(80px);
     }
+
     100% {
-        transform: translateY(-10vh) translateX(-100px);
+        transform: translateY(-10vh) translateX(-80px);
+        opacity: 0;
     }
 }
+
+/* Quote styling */
+
+.quote {
+    margin-top: 20px;
+    font-style: italic;
+    color: #777;
+}
+
 </style>
 </head>
 
 <body>
 
 <div class="card">
+
+    <div class="love">
+        Vinnu, I love you ❤️
+    </div>
+
     <h1>Hey Love ❤️</h1>
+
+    <h2>For you, Vinnu</h2>
 
     <p>
         You are always on my mind. You are not just someone in my life —
@@ -98,35 +135,15 @@ body {
     </div>
 
 </div>
-    <!-- Floating butterflies -->
-<div class="butterfly" style="left:10%;">🦋</div>
-<div class="butterfly" style="left:40%; animation-delay:3s;">🦋</div>
-<div class="butterfly" style="left:70%; animation-delay:6s;">🦋</div>
 
-<div class="card">
+<!-- Butterflies -->
 
-    <div class="love">
-        Vinnu, I love you ❤️
-    </div>
-
-    <h2>For you, Vinnu</h2>
-
-    <p>
-        You are always on my mind.
-        You are not just someone in my life —
-        you are a part of me.
-    </p>
-
-    <p>
-        Thank you for understanding me,
-        for staying, and for bringing peace into my heart.
-    </p>
-
-    <p style="font-style: italic; color: #777;">
-        "With you, love feels safe again."
-    </p>
-
-</div>
+<div class="butterfly" style="left:10%; animation-delay:0s;">🦋</div>
+<div class="butterfly" style="left:25%; animation-delay:2s;">🦋</div>
+<div class="butterfly" style="left:40%; animation-delay:4s;">🦋</div>
+<div class="butterfly" style="left:55%; animation-delay:6s;">🦋</div>
+<div class="butterfly" style="left:70%; animation-delay:8s;">🦋</div>
+<div class="butterfly" style="left:85%; animation-delay:10s;">🦋</div>
 
 </body>
 </html>
