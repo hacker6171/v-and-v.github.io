@@ -3,38 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>For You Vinnu ❤️</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: "Georgia", serif;
-            background: linear-gradient(to right, #ffdde1, #ee9ca7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #333;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: "Georgia", serif;
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    overflow: hidden;
+}
 
-        .card {
-            background: white;
-            padding: 40px;
-            max-width: 600px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            text-align: center;
-            line-height: 1.6;
-        }
+/* Card styling */
+.card {
+    background: white;
+    padding: 40px;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
 
-        h1 {
-            color: #e91e63;
-        }
+/* Heartbeat animation */
+.love {
+    font-size: 28px;
+    color: #e91e63;
+    animation: beat 1.2s infinite;
+    margin-bottom: 15px;
+}
 
-        .quote {
-            margin-top: 20px;
-            font-style: italic;
-            color: #777;
-        }
-    </style>
+@keyframes beat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+/* Butterfly animation */
+.butterfly {
+    position: absolute;
+    font-size: 28px;
+    animation: fly 12s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(100vh) translateX(0);
+    }
+    50% {
+        transform: translateY(50vh) translateX(100px);
+    }
+    100% {
+        transform: translateY(-10vh) translateX(-100px);
+    }
+}
+</style>
 </head>
 
 <body>
@@ -73,6 +96,35 @@
     <div class="quote">
         "You are not just in my life — you are part of my healing."
     </div>
+
+</div>
+    <!-- Floating butterflies -->
+<div class="butterfly" style="left:10%;">🦋</div>
+<div class="butterfly" style="left:40%; animation-delay:3s;">🦋</div>
+<div class="butterfly" style="left:70%; animation-delay:6s;">🦋</div>
+
+<div class="card">
+
+    <div class="love">
+        Vinnu, I love you ❤️
+    </div>
+
+    <h2>For you, Vinnu</h2>
+
+    <p>
+        You are always on my mind.
+        You are not just someone in my life —
+        you are a part of me.
+    </p>
+
+    <p>
+        Thank you for understanding me,
+        for staying, and for bringing peace into my heart.
+    </p>
+
+    <p style="font-style: italic; color: #777;">
+        "With you, love feels safe again."
+    </p>
 
 </div>
 
